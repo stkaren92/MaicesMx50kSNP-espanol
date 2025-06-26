@@ -71,7 +71,7 @@ shinyUI(fluidPage(
                plotOutput(outputId="pca", width = "100%", height = "400px"), 
                
                # Plot tree
-               h4("Árbol de distancia genéticas", align = "center"),
+               h4("Árbol de distancia genéticas", align = "center"),
                plotOutput(outputId="tree", width = "100%", height = "400px"),
                
                # Plot map

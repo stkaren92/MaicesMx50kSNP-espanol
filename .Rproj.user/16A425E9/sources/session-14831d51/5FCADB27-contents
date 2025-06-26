@@ -2,11 +2,17 @@ library(shiny)
 library(sf)
 library(scales)
 library(ape)
+library(dplyr)
+library(maps)
 
 # get data
 fullmat<- read.delim("data/maizteocintle_SNP50k_meta_extended_4shiny.txt", sep="\t", header=TRUE)
+fullmat <- fullmat %>% 
+  mutate(across(c(Estado,Raza), as.factor))
+
 maizemat<-fullmat[1:161,] # keep only maize
 teosmat<-fullmat[162:166,]
+
 
 mapregio<-st_read("data/destdv250k_2gw/destdv250k_2gw.shp")
 

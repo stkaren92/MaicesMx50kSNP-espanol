@@ -3,7 +3,7 @@
     "path": "~/Documents/shiny_bioagro/MaicesMx50kSNP-espanol/server.R",
     "project_path": "server.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "3815174200",
     "contents": "",
     "dirty": false,
     "created": 1750363195083.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "5,24",
-        "scrollLine": "0"
+        "cursorPosition": "146,6",
+        "scrollLine": "134"
     },
     "folds": "",
-    "lastKnownWriteTime": 1450307216,
+    "lastKnownWriteTime": 1750968006,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1450307216,
+    "last_content_update": 1750968006378,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -4,6 +4,7 @@ shinyServer(function(input, output) {
 
   ## Subset   
   maizemat2<- reactive({
+    
     # by desired Altitude
     maizemat<-maizemat[c(maizemat$Altitud>=input$Altitud[1] & maizemat$Altitud<=input$Altitud[2]),]
     
@@ -142,7 +143,7 @@ shinyServer(function(input, output) {
        if(input$ColorBy=="Biogeografía del maíz") ColorBy <-maizemat2()$ColorByPeralesBiog
        
       # Plot
-      plot(mapregio, border="grey", lwd=0.8)
+      plot(mapregio["geometry"], border="grey", lwd=0.8)
       points(x=maizemat2()$Longitud, y= maizemat2()$Latitud, pch=19, cex=0.8, col=alpha(ColorBy, 0.6))                
                        })
      
