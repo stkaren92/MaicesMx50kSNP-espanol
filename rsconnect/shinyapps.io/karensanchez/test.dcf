@@ -1,0 +1,12 @@
+name: test
+title: test
+username: karensanchez
+account: karensanchez
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14963756
+bundleId: 10486887
+url: https://karensanchez.shinyapps.io/test/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
