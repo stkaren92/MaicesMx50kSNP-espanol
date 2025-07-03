@@ -1,9 +1,9 @@
-library(shiny)
-library(sf)
-library(scales)
 library(ape)
 library(dplyr)
 library(maps)
+library(scales)
+library(sf)
+library(shiny)
 
 # get data
 fullmat<- read.delim("data/maizteocintle_SNP50k_meta_extended_4shiny.txt", sep="\t", header=TRUE)
@@ -23,4 +23,3 @@ x<-fullmat[!duplicated(fullmat$Raza),]
 x<-x[, c(4,18)]
 x<-x[order(x$Sanchezetal_grupo),]
 x$Raza<-factor(as.vector(x$Raza), levels=as.vector(x$Raza))
-
