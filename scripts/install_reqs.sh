@@ -29,6 +29,7 @@ apt_install \
 install2.r --error --skipinstalled -n "$NCPUS" \
     ape \
     dplyr \
+    ggplot2 \
     maps \
     scales \
     sf \
