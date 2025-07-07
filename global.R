@@ -4,6 +4,7 @@ library(maps)
 library(scales)
 library(sf)
 library(shiny)
+library(ggplot2)
 
 # get data
 fullmat<- read.delim("data/maizteocintle_SNP50k_meta_extended_4shiny.txt", sep="\t", header=TRUE)

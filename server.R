@@ -143,9 +143,15 @@ shinyServer(function(input, output) {
        if(input$ColorBy=="Biogeografía del maíz") ColorBy <-maizemat2()$ColorByPeralesBiog
        
       # Plot
-      plot(mapregio["geometry"], border="grey", lwd=0.8)
-      points(x=maizemat2()$Longitud, y= maizemat2()$Latitud, pch=19, cex=0.8, col=alpha(ColorBy, 0.6))                
-                       })
+      points_sf <- st_as_sf(maizemat2(), 
+                            coords = c("Longitud", "Latitud"),
+                            crs = "WGS84")
+      points_sf <- st_transform(points_sf, crs = st_crs(mapregio))
+      ggplot() +
+        geom_sf(data = mapregio["geometry"], fill = NA, color = "grey") +
+        geom_sf(data = points_sf, col = alpha(ColorBy, 0.6), size = 2) +
+        theme_void()
+    })
      
      output$Legend<- renderImage({
        
